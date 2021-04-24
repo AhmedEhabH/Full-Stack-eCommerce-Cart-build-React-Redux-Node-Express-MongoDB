@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Screens
@@ -8,13 +9,16 @@ import CartScreen from "./Screens/CartScreen";
 
 // Components
 import Navbar from "./components/Navbar";
+import Backdrop from "./components/Backdrop";
+import SideDrawer from "./components/SideDrawer";
 
 function App() {
+    const [sideToggle, setSideToggle] = useState(false);
     return (
         <Router>
-            <Navbar />
-            {/* SideDrawer*/}
-            {/* Backdrop */}
+            <Navbar click={() => setSideToggle(true)} />
+            <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
+            <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
 
             <main>
                 <Switch>
