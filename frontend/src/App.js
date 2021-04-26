@@ -25,7 +25,7 @@ function App() {
                     <Route exact path="/" component={HomeScreen} />
                     <Route
                         exact
-                        path="/products/:id"
+                        path="/product/:id"
                         component={ProductScreen}
                     />
                     <Route exact path="/cart" component={CartScreen} />
