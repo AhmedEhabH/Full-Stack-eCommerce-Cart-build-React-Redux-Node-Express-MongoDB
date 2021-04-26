@@ -1,5 +1,6 @@
 import "./HomeScreen.css";
 
+// Components
 import Product from '../components/Product';
 
 export default function HomeScreen() {
